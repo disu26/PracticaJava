@@ -11,8 +11,14 @@ import javax.swing.JOptionPane;
  */
 public final class Exercise {
     public static void main(String[] args) {
-        double radio = Double.parseDouble(JOptionPane.showInputDialog("Ingrese el radio del circulo"));
-        JOptionPane.showMessageDialog(null,"El area del circulo es: "+ calculateCircleArea(radio));
+        try {
+            double radio = Double.parseDouble(JOptionPane.showInputDialog("Ingrese el radio del circulo"));
+            JOptionPane.showMessageDialog(null,"El area del circulo " +
+                    "es: "+ calculateCircleArea(radio));
+        }catch (NumberFormatException exception){
+            JOptionPane.showMessageDialog(null,"Solo ingrese valores numericos.");
+        }
+
     }
 
     /**
