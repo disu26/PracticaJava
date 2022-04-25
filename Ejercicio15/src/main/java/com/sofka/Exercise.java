@@ -3,7 +3,11 @@ package com.sofka;
 import javax.swing.JOptionPane;
 
 /**
- * Programa que muestra un método y solo sale cuando el usuario lo desea.
+ * Programa que muestra un menú y solo sale cuando el usuario lo desea.
+ *
+ * @version 1.0.0 2022-04-24
+ * @author Dímar Andrey Suárez Hidalgo <dimar260212@gmail.com>
+ * @since 1.0.0
  */
 public final class Exercise {
     public static void main(String[] args) {
