@@ -16,6 +16,10 @@ public final class Exercise {
 
     /**
      * Método que muestra el menú de opciones.
+     *
+     * @version 1.0.0 2022-04-24
+     * @author Dímar Andrey Suárez Hidalgo <dimar260212@gmail.com>
+     * @since 1.0.0
      */
     private static void menu(){
         Boolean exit = false;
