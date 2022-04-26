@@ -162,17 +162,27 @@ public abstract class Electrodomestico {
     private Double precioPeso(){
         Double precioPeso = 0.0;
 
-        if(peso >= 0.0 && peso <= 19.0){
+        if(Boolean.TRUE.equals(pesoEstaEnRango(0.0, 19.0))){
             precioPeso = 10.0;
-        }else if(peso >= 20.0 && peso <= 49.0){
+        }else if(Boolean.TRUE.equals(pesoEstaEnRango(20.0, 49.0))){
             precioPeso = 50.0;
-        }else if(peso >= 50.0 && peso <= 79.0){
+        }else if(Boolean.TRUE.equals(pesoEstaEnRango(50.0, 79.0))){
             precioPeso = 80.0;
         }else if(peso >= 80.0){
             precioPeso = 100.0;
         }
-
         return precioPeso;
+    }
+
+    /**
+     * Método que hace la verificación de los rangos.
+     *
+     * @param rango1 rango inferior a comprobar
+     * @param rango2 rango superior a comprobar
+     * @return Boolean que indica si el número está entre este rango
+     */
+    private Boolean pesoEstaEnRango(Double rango1, Double rango2){
+        return peso >= rango1 && peso <= rango2;
     }
 
     /**
